@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 使 body 佔滿整個視窗高度 */
+    color: white; /* 文字顏色設為白色，以在深色背景下保持可讀性 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    /* 定義動畫屬性 */
+    animation-name: colorChange; /* 指定 @keyframes 的名稱 */
+    animation-duration: 10s;    /* 動畫持續時間為 10 秒 */
+    animation-timing-function: ease-in-out; /* 動畫速度曲線 */
+    animation-iteration-count: infinite; /* 無限次重複動畫 */
+}
+
+/* 定義 @keyframes 動畫規則 */
+@keyframes colorChange {
+    0% {
+        background-color: #FF5733; /* 初始顏色 */
+    }
+    25% {
+        background-color: #33FF57; /* 中間點顏色 1 */
+    }
+    50% {
+        background-color: #3357FF; /* 中間點顏色 2 */
+    }
+    75% {
+        background-color: #F333FF; /* 中間點顏色 3 */
+    }
+    100% {
+        background-color: #FF5733; /* 回到初始顏色，形成平滑循環 */
+    }
+}
+
+.content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* 內容區塊的半透明背景，使其在動態背景下更易讀 */
+    border-radius: 10px;
+}
